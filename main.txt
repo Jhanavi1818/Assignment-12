@@ -1,0 +1,85 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Welcome to Overleaf --- just edit your LaTeX on the left,
+% and we'll compile it for you on the right. If you open the
+% 'Share' menu, you can invite other users to edit at the same
+% time. See www.overleaf.com/learn for more info. Enjoy!
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Inbuilt themes in beamer
+\documentclass{beamer}
+
+% Theme choice:
+\usetheme{CambridgeUS}
+
+% Title page details: 
+\title{Assignment 12} 
+\author{Kummitha Jhanavi (CS21BTECH11032)}
+\date{\today}
+\logo{\large \LaTeX{}}
+
+
+\begin{document}
+
+% Title page frame
+\begin{frame}
+    \titlepage 
+\end{frame}
+
+% Remove logo from the next slides
+\logo{}
+
+
+% Outline frame
+\begin{frame}{Outline}
+    \tableofcontents
+\end{frame}
+
+
+
+
+
+% Blocks frame
+\section{Question}
+\begin{frame}{Question}
+    \begin{block}{Standard Block}
+     
+     Given a normal process x(t) with $\eta$_{x}=0 and $R_{x}($\tau$)$=4e^{-2$\mid$$ \tau$$\mid$}, we from the random variables z= x(t+1), w =x(t-1),
+     
+     (a). find E(zw) and E[(z+w)^{2}].
+     
+     (b) find f_{z}(z)  P(z <1)  f_{zw}(z,w)
+    \end{block}
+
+\end{frame} 
+\section{Solution}
+\begin{frame}{Solution}
+\begin{block}
+    
+    (a). \begin{equation}
+        E(zw) = R_{x}(2) = 4e^{-4}
+    \end{equation}
+    \begin{equation}
+        E(z^{2})=E=(w^{2})=R_{x}(0)=4
+    \end{equation}
+    \begin{equation}
+        E((z+w)^{2})=R_{x}(0)+R_{x}(0)+2R_{x}(2)=8(1+e^{-4})
+    \end{equation}
+
+(b).z is N(0,2)
+\begin{equation}
+    P(z < 1)=F_{z}(1)=G(1/2)
+\end{equation}
+\begin{equation}
+    r_{zw}=e^{-4}
+\end{equation}
+
+f_{zw}(z,w) :N(0,0 ; 2,2 ;e^{-4})
+
+
+    \end{block}
+    \end{frame}
+    
+\end{document}
